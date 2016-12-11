@@ -1,152 +1,152 @@
 <html lang="en">
-    <head>
-        <title>Harder Better Faster Stronger</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <div class="keys-wrapper">
-            <div class="keys-group" id="keysL">
-                <div class="key-group">
-                    <div data-key="81" class="key-minor key">
-                    <kbd>Q</kbd>
-                    <span class="sound">Work it</span>
-                    </div>
+  <head>
+    <title>Harder Better Faster Stronger</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="keys-wrapper">
+      <div class="keys-group" id="keysL">
+        <div class="key-group">
+          <div data-key="81" class="key-minor key">
+          <kbd>Q</kbd>
+          <span class="sound">Work it</span>
+          </div>
 
-                    <div data-key="87" class="key-major key">
-                    <kbd>W</kbd>
-                    <span class="sound">Harder</span>
-                    </div>
-                </div>
-                <div class="key-group">
-                    <div data-key="69" class="key-minor key">
-                    <kbd>E</kbd>
-                    <span class="sound">Make it</span>
-                    </div>
-
-                    <div data-key="82" class="key-major key">
-                    <kbd>R</kbd>
-                    <span class="sound">Better</span>
-                    </div>
-                </div>
-                <div class="key-group">
-                    <div data-key="65" class="key-minor key">
-                    <kbd>A</kbd>
-                    <span class="sound">Do it</span>
-                    </div>
-
-                    <div data-key="83" class="key-major key">
-                    <kbd>S</kbd>
-                    <span class="sound">Faster</span>
-                    </div>
-                </div>
-                <div class="key-group">
-                    <div data-key="68" class="key-minor key">
-                    <kbd>D</kbd>
-                    <span class="sound">Makes us</span>
-                    </div>
-
-                    <div data-key="70" class="key-major key">
-                    <kbd>F</kbd>
-                    <span class="sound">Stronger</span>
-                    </div>
-                </div>
-            </div>
-            <div class="keys-group" id="keysR">
-                <div class="key-group">
-                    <div data-key="80" class="key-minor key">
-                    <kbd>P</kbd>
-                    <span class="sound">More than</span>
-                    </div>
-
-                    <div data-key="79" class="key-major key">
-                    <kbd>O</kbd>
-                    <span class="sound">Ever</span>
-                    </div>
-                </div>
-                <div class="key-group">
-                    <div data-key="73" class="key-minor key">
-                    <kbd>I</kbd>
-                    <span class="sound">Hour</span>
-                    </div>
-
-                    <div data-key="85" class="key-major key">
-                    <kbd>U</kbd>
-                    <span class="sound">After</span>
-                    </div>
-                </div>
-                <div class="key-group">
-                    <div data-key="186" class="key-minor key">
-                    <kbd>Ç</kbd>
-                    <span class="sound">Our</span>
-                    </div>
-
-                    <div data-key="76" class="key-major key">
-                    <kbd>L</kbd>
-                    <span class="sound">Work is</span>
-                    </div>
-                </div>
-                <div class="key-group">
-                    <div data-key="75" class="key-minor key">
-                    <kbd>K</kbd>
-                    <span class="sound">Never</span>
-                    </div>
-
-                    <div data-key="74" class="key-major key">
-                    <kbd>J</kbd>
-                    <span class="sound">Over</span>
-                    </div>
-                </div>
-            </div>
+          <div data-key="87" class="key-major key">
+          <kbd>W</kbd>
+          <span class="sound">Harder</span>
+          </div>
         </div>
+        <div class="key-group">
+          <div data-key="69" class="key-minor key">
+          <kbd>E</kbd>
+          <span class="sound">Make it</span>
+          </div>
 
-        <audio data-key="81" src="sounds/work it.wav"></audio>
-        <audio data-key="87" src="sounds/harder.wav"></audio>
-        <audio data-key="69" src="sounds/make it.wav"></audio>
-        <audio data-key="82" src="sounds/better.wav"></audio>
-        <audio data-key="65" src="sounds/do it.wav"></audio>
-        <audio data-key="83" src="sounds/faster.wav"></audio>
-        <audio data-key="68" src="sounds/makes us.wav"></audio>
-        <audio data-key="70" src="sounds/stronger.wav"></audio>
-        <audio data-key="80" src="sounds/more than.wav"></audio>
-        <audio data-key="79" src="sounds/ever.wav"></audio>
-        <audio data-key="73" src="sounds/hour.wav"></audio>
-        <audio data-key="85" src="sounds/after.wav"></audio>
-        <audio data-key="186" src="sounds/our.wav"></audio>
-        <audio data-key="76" src="sounds/work is.wav"></audio>
-        <audio data-key="75" src="sounds/never.wav"></audio>
-        <audio data-key="74" src="sounds/over.wav"></audio>
+          <div data-key="82" class="key-major key">
+          <kbd>R</kbd>
+          <span class="sound">Better</span>
+          </div>
+        </div>
+        <div class="key-group">
+          <div data-key="65" class="key-minor key">
+          <kbd>A</kbd>
+          <span class="sound">Do it</span>
+          </div>
 
-        <script>
-            window.addEventListener('keydown', playAudioKey)
-            keys = document.querySelectorAll('.key')
-            keys.forEach(key => key.addEventListener('transitionend', removeTransition))
-            keys.forEach(key => key.addEventListener('click', playAudioClick))
+          <div data-key="83" class="key-major key">
+          <kbd>S</kbd>
+          <span class="sound">Faster</span>
+          </div>
+        </div>
+        <div class="key-group">
+          <div data-key="68" class="key-minor key">
+          <kbd>D</kbd>
+          <span class="sound">Makes us</span>
+          </div>
 
-            function playAudioClick(e) {
-                target = e.toElement
-                if(target.tagName !== 'DIV')
-                    target = target.parentElement
+          <div data-key="70" class="key-major key">
+          <kbd>F</kbd>
+          <span class="sound">Stronger</span>
+          </div>
+        </div>
+      </div>
+      <div class="keys-group" id="keysR">
+        <div class="key-group">
+          <div data-key="80" class="key-minor key">
+          <kbd>P</kbd>
+          <span class="sound">More than</span>
+          </div>
 
-                const key = target
-                const audio = document.querySelector(`audio[data-key="${key.dataset.key}"]`)
-                key.classList.add('playing')
-                audio.currentTime = 0
-                audio.play()
-            }
+          <div data-key="79" class="key-major key">
+          <kbd>O</kbd>
+          <span class="sound">Ever</span>
+          </div>
+        </div>
+        <div class="key-group">
+          <div data-key="73" class="key-minor key">
+          <kbd>I</kbd>
+          <span class="sound">Hour</span>
+          </div>
 
-            function playAudioKey(e) {
-                const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`)
-                const key = document.querySelector(`.key[data-key="${e.keyCode}"]`)
-                if(!audio) return
-                key.classList.add('playing')
-                audio.currentTime = 0
-                audio.play()
-            }
+          <div data-key="85" class="key-major key">
+          <kbd>U</kbd>
+          <span class="sound">After</span>
+          </div>
+        </div>
+        <div class="key-group">
+          <div data-key="186" class="key-minor key">
+          <kbd>Ç</kbd>
+          <span class="sound">Our</span>
+          </div>
 
-            function removeTransition(e) {
-                if(e.propertyName !== 'transform') return
-                this.classList.remove('playing')
-            }
-        </script>
-    </body>
+          <div data-key="76" class="key-major key">
+          <kbd>L</kbd>
+          <span class="sound">Work is</span>
+          </div>
+        </div>
+        <div class="key-group">
+          <div data-key="75" class="key-minor key">
+          <kbd>K</kbd>
+          <span class="sound">Never</span>
+          </div>
+
+          <div data-key="74" class="key-major key">
+          <kbd>J</kbd>
+          <span class="sound">Over</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <audio data-key="81" src="sounds/work it.wav"></audio>
+    <audio data-key="87" src="sounds/harder.wav"></audio>
+    <audio data-key="69" src="sounds/make it.wav"></audio>
+    <audio data-key="82" src="sounds/better.wav"></audio>
+    <audio data-key="65" src="sounds/do it.wav"></audio>
+    <audio data-key="83" src="sounds/faster.wav"></audio>
+    <audio data-key="68" src="sounds/makes us.wav"></audio>
+    <audio data-key="70" src="sounds/stronger.wav"></audio>
+    <audio data-key="80" src="sounds/more than.wav"></audio>
+    <audio data-key="79" src="sounds/ever.wav"></audio>
+    <audio data-key="73" src="sounds/hour.wav"></audio>
+    <audio data-key="85" src="sounds/after.wav"></audio>
+    <audio data-key="186" src="sounds/our.wav"></audio>
+    <audio data-key="76" src="sounds/work is.wav"></audio>
+    <audio data-key="75" src="sounds/never.wav"></audio>
+    <audio data-key="74" src="sounds/over.wav"></audio>
+
+    <script>
+      window.addEventListener('keydown', playAudioKey)
+      keys = document.querySelectorAll('.key')
+      keys.forEach(key => key.addEventListener('transitionend', removeTransition))
+      keys.forEach(key => key.addEventListener('click', playAudioClick))
+
+      function playAudioClick(e) {
+        target = e.toElement
+        if(target.tagName !== 'DIV')
+          target = target.parentElement
+
+        const key = target
+        const audio = document.querySelector(`audio[data-key="${key.dataset.key}"]`)
+        key.classList.add('playing')
+        audio.currentTime = 0
+        audio.play()
+      }
+
+      function playAudioKey(e) {
+        const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`)
+        const key = document.querySelector(`.key[data-key="${e.keyCode}"]`)
+        if(!audio) return
+        key.classList.add('playing')
+        audio.currentTime = 0
+        audio.play()
+      }
+
+      function removeTransition(e) {
+        if(e.propertyName !== 'transform') return
+        this.classList.remove('playing')
+      }
+    </script>
+  </body>
 </html>
